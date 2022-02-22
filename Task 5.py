@@ -1,9 +1,10 @@
 import requests
+
 url = 'https://unsplash.com/'
-x = requests.get(url)
-print(x.text)
+response = requests.get(url)
+print(response.text)
 print("Status code:")
-print("\t*", x.status_code)
+print("\t*", response.status_code)
 
 h = requests.head(url)
 print("Header: ")
