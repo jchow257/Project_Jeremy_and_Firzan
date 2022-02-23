@@ -1,12 +1,12 @@
 import requests
 
 url = 'https://unsplash.com/'
-response = requests.get(url)
-print(response.text)
+x = requests.get(url)
+print(x.text)
 print("Status code:")
-print("\t*", response.status_code)
+print("\t*", x.status_code)
 
-if response.status_code :
+if x.status_code:
     print('OK')
 else:
     print('BOO')
@@ -17,3 +17,12 @@ print("Top of the header")
 for y in h.headers:
     print("\t", y, ":", h.headers[y])
 print("Bottom of the header")
+
+headers = {
+    'User-agent': 'Mobile'
+}
+
+ur12 = 'http://httpbin.org/headers'
+xh = requests.get(ur12,
+headers=headers)
+print(xh.text)
