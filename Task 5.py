@@ -6,6 +6,11 @@ print(response.text)
 print("Status code:")
 print("\t*", response.status_code)
 
+if response.status_code :
+    print('OK')
+else:
+    print('BOO')
+
 h = requests.head(url)
 print("Header: ")
 print("Top of the header")
